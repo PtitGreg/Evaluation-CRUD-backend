@@ -4,8 +4,7 @@ const mongoose = require("mongoose");
 const { findById } = require("./models/products");
 const Product = require("./models/products");
 require("dotenv").config();
-mongoose.connect(process.env.MONGO_URL,
-		{ useNewUrlParser: true, useUnifiedTopology: true },
+mongoose.connect(process.env.MONGO_URL,	{ useNewUrlParser: true, useUnifiedTopology: true },
 	)
 	.then(() => console.log("Connexion à MongoDB réussie !"))
 	.catch(() => console.log("Connexion à MongoDB échouée !"));
